@@ -230,10 +230,6 @@ nav ul {
   width: 100%;
 }
 
-.dining-page .box p {
-  border-bottom: none;
-}
-
 .box {
   background-color: var(--light-gray);
   border-radius: 8px;
@@ -298,6 +294,10 @@ nav ul {
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   margin-top: 10px;
+}
+
+.dining-page .box p {
+  border-bottom: none;
 }
 
 /* --- Filter Pills --- */
@@ -583,4 +583,5 @@ footer a:visited {
   main {
     padding: 15px 120px 0;
   }
+
 }
