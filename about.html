@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Discover Taniti</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti" href="index.html">
+          <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti" href="index.html">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Taniti</a></li>
+      <li><a href="things-to-do.html">Things to Do</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="lodging.html">Lodging</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>About Taniti</h1>
+    <p style="text-align: center;">Taniti is a small tropical island in the Pacific. Our population of about 20,000 occupies just under 500 square
+      miles of lush paradise. We welcome you to come and enjoy our one of kind vacation and experience destination.</p>
+    <div class="GoodToKnow">
+      <h2 name="good-to-know">Good to Know:</h2>
+
+      <div class="info-box-2col">
+        <div class="box">
+          <ul>
+            <li><span class="li-label">Currency:</span> Taniti uses the U.S. dollar as its primary currency, though euros and yen are also widely
+              accepted.</li>
+            <li><span class="li-label">Language:</span> English is the primary language spoken by most younger locals.</li>
+            <li><span class="li-label">Medical:</span> Taniti is home to a hospital with multilingual staff as well as several small clinics.</li>
+            <li><span class="li-label">Power:</span> Just like the U.S. Taniti uses 120v outlets.</li>
+          </ul>
+        </div>
+
+        <div class="box">
+          <ul>
+            <li><span class="li-label">Drinking Age:</span> Taniti's legal drinking age is 18.</li>
+            <li><span class="li-label">Alcohol hours:</span>Alcohol is not served between midnight to 9:00 A.M..</li>
+            <li><span class="li-label">Safety:</span> While violent crime is rare, watch for pickpocketing in tourist areas.</li>
+            <li><span class="li-label">Holidays:</span> Taniti celebrates many closures on national holidays, please plan ahead.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Notable locations:</h2>
+      <div class="info-box-1col">
+        <div class="box">
+          <h3>Taniti City:</h3>
+          <p>Main hub, native architecture, beaches</p>
+          <h3>Yellow Leaf Bay:</h3>
+          <p>Harbor, Cruise ship dock</p>
+          <h3>Merriton Landing:</h3>
+          <p>North side, Rapidly developing, lots of activities</p>
+        </div>
+      </div>
+      
+        <h2>Medical Access:</h2>
+        <div class="info-box-1col">
+          <div class="box">
+            <h3>Hospital:</h3>
+            <p>Taniti has one hospital with multilingual staff available to assist international visitors.</p>
+            <h3>Clinics:</h3>
+            <p>Several clinics are located on the island for minor medical needs.</p>
+            <h3>Travel Insurance:</h3>
+            <p>Visitors are encouraged to obtain travel health insurance before arriving.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="things-to-do.html">Things to Do</a> |
+      <a href="lodging.html">Lodging</a> |
+      <a href="travel.html">Travel</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Taniti Island &copy; 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>

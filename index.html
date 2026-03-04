@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Discover Taniti</title>
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti" href="index.html">
+                    <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti"
+                        href="index.html">
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Taniti</a></li>
+            <li><a href="things-to-do.html">Things to Do</a></li>
+            <li><a href="dining.html">Dining</a></li>
+            <li><a href="lodging.html">Lodging</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Welcome to Taniti</h1>
+            <p>Come to Taniti to experience the best the Pacific has to offer!</p>
+        </div>
+    </div>
+
+    <main>
+        <div class="Cards">
+            <a href="about.html" class="card">
+                <img src="res/About.avif" alt="About Taniti">
+                <div class="container">
+                    <h2>About Taniti</h2>
+                </div>
+            </a>
+            <a href="things-to-do.html" class="card">
+                <img src="res/Things-to-do.avif" alt="Things to Do">
+                <div class="container">
+                    <h2>Things to Do</h2>
+                </div>
+            </a>
+            <a href="dining.html" class="card">
+                <img src="res/Dining.avif" alt="Dining">
+                <div class="container">
+                    <h2>Dining</h2>
+                </div>
+            </a>
+            <a href="lodging.html" class="card">
+                <img src="res/Lodging.avif" alt="Lodging">
+                <div class="container">
+                    <h2>Lodging</h2>
+                </div>
+            </a>
+            <a href="travel.html" class="card">
+                <img src="res/Travel.avif" alt="Travel">
+                <div class="container">
+                    <h2>Travel</h2>
+                </div>
+            </a>
+            <a href="contact.html" class="card">
+                <img src="res/Contact.avif" alt="Contact">
+                <div class="container">
+                    <h2>Contact</h2>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            <a href="things-to-do.html">Things to Do</a> |
+            <a href="lodging.html">Lodging</a> |
+            <a href="travel.html">Travel</a> |
+            <a href="contact.html">Contact</a>
+        </p>
+        <p>Taniti Island &copy; 2026</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('navMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>

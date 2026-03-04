@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Discover Taniti</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti">
+          <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Taniti</a></li>
+      <li><a href="things-to-do.html">Things to Do</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="lodging.html">Lodging</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Things to Do</h1>
+    <div class="filter-pills">
+      <button class="filter-pill active">All</button>
+      <button class="filter-pill">Nature</button>
+      <button class="filter-pill">Water</button>
+      <button class="filter-pill">Adventure</button>
+      <button class="filter-pill">Culture</button>
+      <button class="filter-pill">Entertainment</button>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity-card" data-category="nature">
+        <div class="activity-img" style="background-image: url('res/nature.avif');"></div>
+        <div class="activity-content">
+          <h2>Nature</h2>
+          <ul>
+            <li>Sandy and rocky beaches</li>
+            <li>Rain forest hikes</li>
+            <li>Active volcano visits</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="water">
+        <div class="activity-img" style="background-image: url('res/water.avif');"></div>
+        <div class="activity-content">
+          <h2>Water</h2>
+          <ul>
+            <li>Snorkeling</li>
+            <li>Chartered fishing tours</li>
+            <li>Boat tours</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="adventure">
+        <div class="activity-img" style="background-image: url('res/adventure.avif');"></div>
+        <div class="activity-content">
+          <h2>Adventure</h2>
+          <ul>
+            <li>Zip-lining (rain forest)</li>
+            <li>Helicopter rides</li>
+            <li>Bike rentals (helmets required)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="culture">
+        <div class="activity-img" style="background-image: url('res/culture.avif');"></div>
+        <div class="activity-content">
+          <h2>Culture</h2>
+          <ul>
+            <li>Local history museum</li>
+            <li>Art galleries</li>
+            <li>Native architecture of Taniti City</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="entertainment">
+        <div class="activity-img" style="background-image: url('res/entertainment.avif');"></div>
+        <div class="activity-content">
+          <h2>Entertainment</h2>
+          <ul>
+            <li>Bowling, arcade, movie theater</li>
+            <li>Dance club, pubs, microbrewery</li>
+            <li>Coming soon: 9-hole golf course</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="things-to-do.html">Things to Do</a> |
+      <a href="lodging.html">Lodging</a> |
+      <a href="travel.html">Travel</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Taniti Island &copy; 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filter-pill');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.textContent.trim().toLowerCase();
+          document.querySelectorAll('.activity-card').forEach(card => {
+            if (cat === 'all' || card.dataset.category === cat) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

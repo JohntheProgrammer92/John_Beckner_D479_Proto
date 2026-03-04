@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Discover Taniti</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti">
+          <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Taniti</a></li>
+      <li><a href="things-to-do.html">Things to Do</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="lodging.html">Lodging</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Travel</h1>
+
+    <h2>Arriving on Taniti</h2>
+    <div class="info-box-2col">
+      <div class="box">
+        <h3>✈️ By Air</h3>
+        <p>Taniti is served by a small airport that accommodates small jets and propeller planes. The airport is currently being expanded to handle larger jets in the future.</p>
+      </div>
+      <div class="box">
+        <h3>🚢 By Sea</h3>
+        <p>Taniti's port at Yellow Leaf Bay welcomes cruise ships and private boats. The port is a popular entry point for visitors arriving by sea.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <h2>Getting Around</h2>
+    <div class="getting-around">
+      <div class="box">
+        <h3>🚌 Public Bus</h3>
+        <p>Taniti City is served by a reliable public bus system that runs frequently throughout the day.</p>
+      </div>
+      <div class="box">
+        <h3>🚐 Private Bus</h3>
+        <p>Private bus services are available for hire and can take you anywhere on the island.</p>
+      </div>
+      <div class="box">
+        <h3>🚕 Taxi</h3>
+        <p>Taxis are available throughout Taniti City and surrounding areas. Most drivers speak some English.</p>
+      </div>
+      <div class="box">
+        <h3>🚗 Rental Car</h3>
+        <p>Rental cars are available, though roads outside of Taniti City may be unpaved.</p>
+      </div>
+      <div class="box">
+        <h3>🚲 Bike Rental</h3>
+        <p>Bicycles are available for rent and are a popular way to explore the island at your own pace.</p>
+      </div>
+      <div class="box">
+        <h3>🚶 Walking</h3>
+        <p>Many attractions in Taniti City and Merriton Landing are within walking distance of each other.</p>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="box" style="margin-top: 15px;">
+      <h2>Good to Know</h2>
+      <div class="box-3col">
+        <div>
+          <h3>🏥 Medical</h3>
+          <p>Taniti has one hospital with multilingual staff and several clinics for minor medical needs.</p>
+        </div>
+        <div>
+          <h3>🗓️ Holidays</h3>
+          <p>Many businesses close on national holidays. Please plan your travel and activities accordingly.</p>
+        </div>
+        <div>
+          <h3>🔒 Safety</h3>
+          <p>Taniti is a safe destination. Violent crime is rare, though visitors should watch for pickpocketing in tourist areas.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>
+      <a href="things-to-do.html">Things to Do</a> |
+      <a href="lodging.html">Lodging</a> |
+      <a href="travel.html">Travel</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Taniti Island &copy; 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>

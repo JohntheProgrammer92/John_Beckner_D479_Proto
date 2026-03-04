@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Discover Taniti</title>
+</head>
+
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti" href="index.html">
+          <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti" href="index.html">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Taniti</a></li>
+      <li><a href="things-to-do.html">Things to Do</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="lodging.html">Lodging</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Lodging</h1>
+    <h2>Accommodations</h2>
+    <div class="filter-pills">
+      <button class="filter-pill active">All</button>
+      <button class="filter-pill">Budget</button>
+      <button class="filter-pill">Mid-range</button>
+      <button class="filter-pill">Bed & Breakfast</button>
+      <button class="filter-pill">Luxury</button>
+      <button class="filter-pill">Vacation rentals</button>
+    </div>
+
+    <div class="activities">
+
+      <div class="activity-card" data-category="Budget">
+        <div class="activity-img" style="background-image: url('res/budget.avif');"></div>
+        <div class="activity-content">
+          <h2>Budget</h2>
+          <ul>
+            <li>Hostels available</li>
+            <li>Most affordable option</li>
+            <li>Great for solo travelers</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="Mid-range">
+        <div class="activity-img" style="background-image: url('res/mid.avif');"></div>
+        <div class="activity-content">
+          <h2>Mid-range</h2>
+          <ul>
+            <li>Many small family-owned hotels</li>
+            <li>Comfortable and locally operated</li>
+            <li>Most popular choice</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="Bed & Breakfast">
+        <div class="activity-img" style="background-image: url('res/bnb.avif');"></div>
+        <div class="activity-content">
+          <h2>Bed & Breakfast</h2>
+          <ul>
+            <li>Increasing number of options</li>
+            <li>Cozy, personal experience</li>
+            <li>Locally owned</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="Luxury">
+        <div class="activity-img" style="background-image: url('res/luxury.avif');"></div>
+        <div class="activity-content">
+          <h2>Luxury</h2>
+          <ul>
+            <li>One large four-star resort</li>
+            <li>Full amenities and services</li>
+            <li>Premium experience</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="activity-card" data-category="Vacation rentals">
+        <div class="activity-img" style="background-image: url('res/rentals.avif');"></div>
+        <div class="activity-content">
+          <h2>Vacation rentals</h2>
+          <ul>
+            <li>Private condos, beach houses, private homes</li>
+            <li>Great for families or larger groups</li>
+            <li>Various locations around the island</li>
+          </ul>
+        </div>
+      </div>
+
+
+      <hr>
+      
+      <div class="trust-badge">
+        🛡️ All accommodations on Taniti are regulated and inspected by the Tanitian government.
+      </div>
+
+      <hr>
+
+      <div class="cta-box">
+        <p>Ready to start planning your stay on Taniti?</p>
+        <a href="contact.html" class="cta-button">Plan Your Trip</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      <a href="things-to-do.html">Things to Do</a> |
+      <a href="lodging.html">Lodging</a> |
+      <a href="travel.html">Travel</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Taniti Island &copy; 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.filter-pill');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const cat = btn.textContent.trim();
+          document.querySelectorAll('.activity-card').forEach(card => {
+            if (cat === 'All' || card.dataset.category === cat) {
+              card.classList.remove('hidden');
+            } else {
+              card.classList.add('hidden');
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

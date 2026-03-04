@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Discover Taniti</title>
+</head>
+
+<body class="dining-page">
+  <nav>
+    <div class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <img class="logo-mobile" src="res/favicon-32x32.png" alt="Discover Taniti" href="index.html">
+          <img class="logo-desktop" src="res/android-chrome-512x512.png" alt="Discover Taniti" href="index.html">
+        </a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Taniti</a></li>
+      <li><a href="things-to-do.html">Things to Do</a></li>
+      <li><a href="dining.html">Dining</a></li>
+      <li><a href="lodging.html">Lodging</a></li>
+      <li><a href="travel.html">Travel</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="dinning-hero-image">
+    <div class="hero-text">
+      <h1>Dining</h1>
+    </div>
+  </div>
+
+  <main>
+  <!-- Restaurants - full width -->
+  <div class="box" style="margin-bottom: 15px;">
+    <h2>Restaurants</h2>
+    <div class="box-3col">
+      <div>
+        <h3>🐟 Local Cuisine</h3>
+        <p><span class="li-label">5 restaurants</span> - Specializing in fresh local fish and rice</p>
+      </div>
+      <div>
+        <h3>🍔 American Style</h3>
+        <p><span class="li-label">3 restaurants</span> - Familiar comfort food options</p>
+      </div>
+      <div>
+        <h3>🍜 Pan-Asian</h3>
+        <p><span class="li-label">2 restaurants</span> - Asian-inspired cuisine</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Groceries and Note - side by side -->
+  <div class="info-box-2col">
+    <div class="box">
+      <h2>Groceries</h2>
+      <div class="box-3col">
+        <p>Two Supermarkets</p>
+        <p>Two smaller grocery stores</p>
+        <p>One convenience store (open 24 hours)</p>
+      </div>
+    </div>
+    <div class="box">
+      <h2>Note</h2>
+      <div class="box-3col">
+        <p>Many restaurants close on national holidays</p>
+        <p>Alcohol not served midnight - 9:00 AM</p>
+        <p>Drinking age is 18</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+  <footer>
+    <p>
+      <a href="things-to-do.html">Things to Do</a> |
+      <a href="lodging.html">Lodging</a> |
+      <a href="travel.html">Travel</a> |
+      <a href="contact.html">Contact</a>
+    </p>
+    <p>Taniti Island &copy; 2026</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+
+</html>
